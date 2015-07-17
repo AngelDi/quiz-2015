@@ -36,4 +36,7 @@ router.get('/quizes/:quizId(\\d+)/comments/new',            commentController.ne
 router.post('/quizes/:quizId(\\d+)/comments',              commentController.create);
 router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish',    sessionController.loginRequired, commentController.publish);
 
+// Definición de rutas de /author
+router.get('/author/name',                      quizController.index);
+
 module.exports = router;
